@@ -1,46 +1,49 @@
-<header>
-  <h2>Reliable, efficient delivery</h2>
-  <h2>
-    <strong> Powered by Technology </strong>
-  </h2>
-  <p>
-    Our Artificial Intelligence powered tools use millions of project data
-    points to ensure that your project is successful
-  </p>
-</header>
-<main>
-  <app-card
-    [cardInfo]="{
-      title: 'Supervisor',
-      description: 'Monitors activity to identify project roadblocks',
-      icon: './images/icon-supervisor.svg',
-      color: 'hsl(180, 62%, 55%)'
-    }"
-  ></app-card>
-  <app-card
-    [cardInfo]="{
-      title: 'Team Builder',
-      description:
-        'Scans our talent network to create the optimal team for your project',
-      icon: './images/icon-team-builder.svg',
-      color: 'hsl(0, 78%, 62%)'
-    }"
-  ></app-card>
-  <app-card
-    [cardInfo]="{
-      title: 'Karma',
-      description: 'Regularly evaluates our talent to ensure quality',
-      icon: './images/icon-karma.svg',
-      color: 'hsl(34, 97%, 64%)'
-    }"
-  ></app-card>
-  <app-card
-    [cardInfo]="{
-      title: 'Calculator',
-      description:
-        'Uses data from past projects to provide better delivery estimates',
-      icon: './images/icon-calculator.svg',
-      color: 'hsl(212, 86%, 64%)'
-    }"
-  ></app-card>
-</main>
+@let $Red= "hsl(0, 78%, 62%)"; @let $Cyan= "hsl(180, 62%, 55%)"; @let $Orange=
+"hsl(34, 97%, 64%)"; @let $Blue= "hsl(212, 86%, 64%)";
+
+<div class="container">
+  <header>
+    <h2 class="title">Reliable, efficient delivery</h2>
+    <h2 class="strong-title">Powered by Technology</h2>
+    <p class="header-description">
+      Our Artificial Intelligence powered tools use millions of project data
+      points to ensure that your project is successful
+    </p>
+  </header>
+  <main>
+    <app-card class="first-card"
+      [cardInfo]="{
+        title: 'Supervisor',
+        description: 'Monitors activity to identify project roadblocks',
+        icon: './images/icon-supervisor.svg',
+        color: $Cyan
+      }"
+    ></app-card>
+    <app-card class="second-card"
+      [cardInfo]="{
+        title: 'Team Builder',
+        description:
+          'Scans our talent network to create the optimal team for your project',
+        icon: './images/icon-team-builder.svg',
+        color: $Red
+      }"
+    ></app-card>
+    <app-card class="third-card"
+      [cardInfo]="{
+        title: 'Karma',
+        description: 'Regularly evaluates our talent to ensure quality',
+        icon: './images/icon-karma.svg',
+        color: $Orange
+      }"
+    ></app-card>
+    <app-card class="fourth-card"
+      [cardInfo]="{
+        title: 'Calculator',
+        description:
+          'Uses data from past projects to provide better delivery estimates',
+        icon: './images/icon-calculator.svg',
+        color: $Blue
+      }"
+    ></app-card>
+  </main>
+</div>

@@ -1,9 +1,9 @@
 @let borderColor = cardInfo()?.color;
 
 <article class="card-container" style="border-color: {{ borderColor }}">
-  <h2 class="title">{{ cardInfo()?.title }}</h2>
-  <p class="description">{{ cardInfo()?.description }}</p>
-  <div class="img-container">
-    <img src="{{ cardInfo()?.icon }}" alt="This space is for an icon image" />
+  <div class="text-container">
+    <h2 class="title">{{ cardInfo()?.title }}</h2>
+    <p class="description">{{ cardInfo()?.description }}</p>
   </div>
+  <img src="{{ cardInfo()?.icon }}" alt="This space is for an icon image" />
 </article>
