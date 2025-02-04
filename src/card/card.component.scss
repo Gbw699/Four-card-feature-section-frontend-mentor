@@ -1,3 +1,32 @@
-.card-container{
-    border: 2px solid;
+@use "../styles.scss" as s;
+
+.card-container {
+  border-top: 4px solid;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 1px rgba($color: s.$GrayishBlue, $alpha: 0.4);
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: white;
+  .text-container {
+    .title {
+      margin: 0;
+      margin-top: 1.5rem;
+      font-size: 22px;
+      font-weight: 600;
+      color: s.$VeryDarkBlue;
+    }
+    .description {
+      margin: 0;
+      margin-top: 0.5rem;
+      font-size: 13px;
+      color: s.$GrayishBlue;
+    }
+  }
+  img {
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+  }
 }
