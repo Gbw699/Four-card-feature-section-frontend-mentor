@@ -1,0 +1,75 @@
+@use "../styles.scss" as s;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 5rem 2rem;
+  header {
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1200px) {
+      grid-row: 1 / 2;
+    }
+    h2 {
+      text-align: center;
+      font-size: clamp(24px, 5.5vw, 36px);
+      color: s.$VeryDarkBlue;
+    }
+    .title {
+      font-weight: 200;
+      margin: 0;
+    }
+    .strong-title {
+      font-weight: 600;
+      margin: 0.3rem 0 1rem 0;
+    }
+    .header-description {
+      text-align: center;
+      margin-bottom: 4rem;
+      margin-top: 0;
+      color: s.$GrayishBlue;
+      max-width: 35rem;
+    }
+  }
+  main {
+    grid-column: 1/13;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 35rem;
+    @media (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      max-width: none;
+      margin: 0 10rem;
+      grid-template-areas:
+        ". second ."
+        "first second fourth"
+        "first third fourth"
+        ". third .";
+      app-card {
+        justify-self: center;
+        width: 23rem;
+      }
+      .first-card {
+        grid-area: first;
+        grid-column: 1 / 5;
+      }
+      .second-card {
+        grid-area: second;
+        grid-column: 5 / 9;
+      }
+      .third-card {
+        grid-area: third;
+        grid-column: 5 / 9;
+      }
+      .fourth-card {
+        grid-area: fourth;
+        grid-column: 9 / 13;
+      }
+    }
+  }
+}
